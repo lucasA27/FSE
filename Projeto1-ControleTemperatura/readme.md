@@ -30,7 +30,7 @@ $ ./main.o
 
 Os gráficos foram gerados através da ferramenta excel da microsoft de um arquivo CSV:
 
-![grafico 1](grafico 1.png)
+![grafico 1](grafico1.png)
 
-![grafico 2](grafico 2.png)
+![grafico 2](grafico2.png)
 
