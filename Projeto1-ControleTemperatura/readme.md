@@ -21,7 +21,7 @@ Neste caso, quando o valor medido de temperatura ficar abaixo do limite inferior
 ## Execução do projeto
 ```sh
 $ git clone https://github.com/lucasA27/Sistemas-Embarcados
-$ cd Projeto1
+$ cd Projeto1-ControleTemperatura
 $ make
 $ ./main.o
 ```
