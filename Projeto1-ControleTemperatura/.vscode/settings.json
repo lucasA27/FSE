@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stdint.h": "c",
+        "ventoinha.h": "c",
+        "stdio.h": "c",
+        "unistd.h": "c"
+    }
+}
