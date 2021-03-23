@@ -36,3 +36,9 @@ Os gráficos foram gerados através da ferramenta excel da microsoft de um arqui
 - VENTOINHA E RESISTOR:
 ![grafico 2](./graficos/grafico2.png)
 
+## Prints da aplicação
+
+![imagem 1](./img/img1.jpg)
+
+
+![imagem 1](./img/img2.jpg)
