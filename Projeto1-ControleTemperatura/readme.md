@@ -18,7 +18,7 @@ Através de entrada de teclado no terminal.
 O controle de temperatura do sistema deve ser realizado utilizando a abordagem de controle PID (Proporcional Integral Derivativo). O PID é um dos tipos mais simples de algoritmos de controle que proporciona um bom desempenho para uma grande variedade de aplicações.
 Neste caso, quando o valor medido de temperatura ficar abaixo do limite inferior, o controlador deverá acionar o resistor de potência para aquecer o sistema. Caso a temperatura medida esteja acima do limite superior, o controlador deve desligar a resistência e acionar a ventoinha.
 
-## Execução do projeto
+## Execução
 ```sh
 $ git clone https://github.com/lucasA27/Sistemas-Embarcados
 $ cd Projeto1-ControleTemperatura
@@ -30,7 +30,9 @@ $ ./main.o
 
 Os gráficos foram gerados através da ferramenta excel da microsoft de um arquivo CSV:
 
-![grafico 1](grafico1.png)
+- TEMPERATURAS:
+![grafico 1](./graficos/grafico1.png)
 
-![grafico 2](grafico2.png)
+- VENTOINHA E RESISTOR:
+![grafico 2](./graficos/grafico2.png)
 

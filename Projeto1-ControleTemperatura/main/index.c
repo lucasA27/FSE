@@ -1,8 +1,8 @@
-#include "../gpio/uart.h"
+#include "../uart/uart.h"
 #include "../bme280/bme280.h"
 #include "../lcd/lcd.h"
-#include "../pwm/resistor.h"
-#include "../pwm/ventoinha.h"
+#include "../gpio/resistor.h"
+#include "../gpio/ventoinha.h"
 #include "../pid/pid.h"
 #include "../arquivo/escreverArq.h"
 #include <signal.h>
@@ -39,10 +39,9 @@ void  menu(){
     case 2:
         printf("Digite uma temperatura\n");
         scanf("%f", &tempUsuario);
-
         break;
     case 3:
-        printf("voce pediu para sair, prencione qualquer tecla para continuar\n");
+        exit(0);
         break;
     default:
         printf("voce deve escolher uma opcao valida\n");
@@ -76,13 +75,12 @@ int main(void){
     signal(SIGTSTP, trata_menu);
 
     tempInterno = TemperaturaInterna();
-    //tempReferen = TemperaturaPotenciometro();
-
-
+    
     if(opcao == 2){
         tempReferen = tempUsuario;
     }else{
         tempReferen = TemperaturaPotenciometro();
+        printf("%f\n", tempReferen);
     }
 
     bme280ReadValues(&tempExter, &p, &h);
