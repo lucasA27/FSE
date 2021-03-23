@@ -31,8 +31,10 @@ $ ./main.o
 Os gráficos foram gerados através da ferramenta excel da microsoft de um arquivo CSV:
 
 - TEMPERATURAS:
+
 ![grafico 1](./graficos/grafico1.png)
 
 - VENTOINHA E RESISTOR:
+
 ![grafico 2](./graficos/grafico2.png)
 
