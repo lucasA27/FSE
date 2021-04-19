@@ -14,7 +14,7 @@ Este trabalho tem por objetivo a criação de um sistema distribuído de automa�
 ## Execução servidor distribuido
 ```sh
 $ git clone https://github.com/lucasA27/Sistemas-Embarcados
-$ cd projeto/servidor_distribuido
+$ cd projeto2/servidor_distribuido
 $ make
 $ ./bin/bin
 $ make clean para remover binarios
@@ -23,7 +23,7 @@ $ make clean para remover binarios
 ## Execução servidor central
 ```sh
 $ git clone https://github.com/lucasA27/Sistemas-Embarcados
-$ cd projeto/servidor_central
+$ cd projeto2/servidor_central
 $ make
 $ ./bin/bin
 $ make clean para remover binarios
