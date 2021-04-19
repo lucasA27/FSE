@@ -25,6 +25,6 @@ int leGpio(int ref);
 void configuragpio();
 void LigaGpio(int ref);
 void DesligaGpio(int ref);
-
+void desligarDispositivos();
 
 #endif // ____GPIO____

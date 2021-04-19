@@ -6,13 +6,12 @@
 #include <unistd.h>
 
 int deveprintar = 1;
-
+int clienteSocket;
 void set_deveprintar(int valor){
 	deveprintar = valor;
 }
 
 int client(char *x) {
-	int clienteSocket;
 	struct sockaddr_in servidorAddr;
 	unsigned short servidorPorta;
 	char *IP_Servidor;
@@ -57,5 +56,8 @@ int client(char *x) {
 			printf("%s\n", buffer);
 
 	}
+	close(clienteSocket);
+}
+void fecharCliente(){
 	close(clienteSocket);
 }

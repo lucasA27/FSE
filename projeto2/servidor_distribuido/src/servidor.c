@@ -10,6 +10,7 @@
 
 int socketCliente;
 char mensagemCliente[50];
+int servidorSocket;
 
 void temperaturaUmidade(){
 	iniciaBme();
@@ -68,7 +69,7 @@ void TrataClienteTCP(int socketCliente) {
 	else if(strncmp(buffer, "t", 1) == 0){
 		temperaturaUmidade();
 	}else{
-		printf("comando invÃ¡lido");
+		printf("comando invalido");
 	}
 
 	while (tamanhoRecebido > 0) {
@@ -87,8 +88,7 @@ void TrataClienteTCP(int socketCliente) {
 }
 
 void distribuido() {
-	int servidorSocket;
-	int socketCliente;
+	
 	struct sockaddr_in servidorAddr;
 	struct sockaddr_in clienteAddr;
 	unsigned short servidorPorta = 10107;
@@ -127,4 +127,8 @@ void distribuido() {
 	}
 	close(servidorSocket);
 
+}
+
+void fecharServidor() {
+    close(servidorSocket);
 }

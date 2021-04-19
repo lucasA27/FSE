@@ -7,10 +7,10 @@
 #include "../inc/gpio.h"
 #include <wiringPi.h> 
 
-
+int clienteSocket;
 
 void client() {
-	int clienteSocket;
+	
 	char *mensagem;	
 	unsigned int tamanhoMensagem;	
 	struct sockaddr_in servidorAddr;
@@ -23,7 +23,7 @@ void client() {
 
 	IP_Servidor = "192.168.0.53";
 	servidorPorta = 10007;
-	mensagem = "sensor detectado\n";
+	mensagem = "sensor detectad ";
 
 	// Criar Socket
 	if((clienteSocket = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0)
@@ -59,7 +59,9 @@ void client() {
 
 
 void enviaSensor(){
-	client();	
+	
+	client();
+	
 }
 
 
@@ -72,4 +74,8 @@ void setupsensor(){
     wiringPiISR(SA6, INT_EDGE_RISING, &enviaSensor);
     wiringPiISR(SP1, INT_EDGE_RISING, &enviaSensor);
     wiringPiISR(SP2, INT_EDGE_RISING, &enviaSensor);
+}
+
+void fecharCliente(){
+	close(clienteSocket);
 }

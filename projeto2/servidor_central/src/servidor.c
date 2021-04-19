@@ -5,6 +5,9 @@
 #include <string.h>
 #include <unistd.h>
 
+	int servidorSocket;
+	int socketCliente;
+
 void TrataClienteTCP(int socketCliente) {
 	char buffer[16];
 	int tamanhoRecebido;
@@ -23,8 +26,7 @@ void TrataClienteTCP(int socketCliente) {
 }
 
 void distribuido() {
-	int servidorSocket;
-	int socketCliente;
+
 	struct sockaddr_in servidorAddr;
 	struct sockaddr_in clienteAddr;
 	unsigned short servidorPorta = 10007;
@@ -63,4 +65,7 @@ void distribuido() {
 	}
 	close(servidorSocket);
 
+}
+void fecharServidor() {
+    close(servidorSocket);
 }

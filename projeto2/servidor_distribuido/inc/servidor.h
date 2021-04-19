@@ -3,5 +3,6 @@
 
 void distribuido();
 void temperaturaUmidade();
+void fecharServidor();
 
 #endif // ____SERVIDOR____

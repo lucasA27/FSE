@@ -5,5 +5,5 @@ void client();
 void criasocket();
 void enviaSensor();
 void setupsensor();
-
+void fecharCliente();
 #endif // ____CLIENTE____

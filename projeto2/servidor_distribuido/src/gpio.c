@@ -5,15 +5,6 @@
 #include "../inc/gpio.h"
 #include "../inc/push_notification.h"
 
-
-
-int leGpio(int ref){
-
-    pinMode(ref,INPUT);
-    int result = digitalRead(ref);
-    return result;
-}
-
 void configuragpio(){
     if (wiringPiSetup() < 0){
         printf("erro");
@@ -30,6 +21,14 @@ void configuragpio(){
 
 }
 
+int leGpio(int ref){
+
+    pinMode(ref,INPUT);
+    int result = digitalRead(ref);
+    return result;
+}
+
+
 void LigaGpio(int ref){
 
     pinMode(ref, OUTPUT);
@@ -42,4 +41,30 @@ void DesligaGpio(int ref){
     digitalWrite(ref, LOW);
 }
 
+void desligarDispositivos() {
+  
+    
+  pinMode(AC1, OUTPUT);
+  digitalWrite(AC1, LOW);
 
+
+  pinMode(AC2, OUTPUT);
+  digitalWrite(AC2, LOW);
+
+  pinMode(LAMP1, OUTPUT);
+  digitalWrite(LAMP1, LOW);
+
+ 
+  pinMode(LAMP2, OUTPUT);
+  digitalWrite(LAMP2, LOW);
+
+
+  pinMode(LAMP3, OUTPUT);
+  digitalWrite(LAMP3, LOW);
+
+  
+  pinMode(LAMP4, OUTPUT);
+  digitalWrite(LAMP4, LOW);
+
+  
+}

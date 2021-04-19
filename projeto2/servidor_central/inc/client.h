@@ -3,4 +3,5 @@
 
 int client(char *x);
 void set_deveprintar(int valor);
+void fecharCliente();
 #endif // ____CLIENTE____

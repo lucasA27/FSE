@@ -10,6 +10,12 @@
 
 char confirme;
 
+void fecharSockets(int signal){
+        fecharServidor();
+        fecharCliente();
+        exit(0);
+}
+
 void tratamenu(int signal){
         set_deveprintar(0);
         menu();
@@ -30,6 +36,7 @@ int main(){
         scanf("%s", &confirme);
 
         signal(SIGTSTP, tratamenu);
+        signal(SIGINT, fecharSockets);
         while(1){
                 client("temp");
                 usleep(1000000);

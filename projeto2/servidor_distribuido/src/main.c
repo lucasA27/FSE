@@ -10,17 +10,21 @@
 #include "../inc/push_notification.h"
 #include <wiringPi.h>
 
-
+void finalizarSocket(int signal){
+    desligarDispositivos();
+    fecharServidor();
+    fecharCliente();
+    exit(0);
+}
 
 
 int main(){
-
+    signal(SIGINT, finalizarSocket);
     configuragpio();
 
     setupsensor();
-    
+
     distribuido();
     
-
 return 0;
 }
