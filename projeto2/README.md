@@ -1,7 +1,7 @@
 # Projeto 2
 Projeto 2 da disciplina de Fundamentos de Sistemas Embarcados (2020/2)
 
-Enunciado do projeto pode ser encontrado em: https://gitlab.com/fse_fga/projetos_2020_2/projeto-1-2020.2
+Enunciado do projeto pode ser encontrado em: https://gitlab.com/fse_fga/projetos_2020_2/projeto-2-2020.2
 
 **Nome**: Lucas Alexandre Fernandes Martins
 
