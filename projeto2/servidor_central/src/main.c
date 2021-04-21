@@ -6,6 +6,7 @@
 #include "../inc/client.h"
 #include "../inc/menu.h"
 #include "../inc/servidor.h"
+#include "../inc/csv.h"
 #include <stdbool.h>
 
 char confirme;
@@ -28,6 +29,8 @@ void* alarme_thread(void *s){
 
 int main(){
         pthread_t thread_alarme;
+
+        cabecalho();
         pthread_create(&thread_alarme,NULL, alarme_thread,NULL);
 
         printf("----------------------------------------BEM-VINDO-------------------------------------------\n");

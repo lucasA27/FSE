@@ -1,4 +1,4 @@
-make: client menu servidor
+make: client menu servidor arquivo
 	gcc ./src/main.c ./obj/*.o -o ./bin/bin -lwiringPi -lpthread
 
 client: ./src/client.c
@@ -9,6 +9,9 @@ menu: ./src/menu.c
 
 servidor: ./src/servidor.c
 	gcc -c ./src/servidor.c -o ./obj/servidor.o
+
+arquivo: ./src/csv.c
+	gcc -c ./src/csv.c -o ./obj/csv.o
 
 clean: 
 	rm -r objects/*
